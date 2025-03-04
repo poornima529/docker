@@ -2,7 +2,7 @@ resource "aws_instance" "this" {
   ami                    = "ami-09c813fb71547fc4f" # This is our devops-practice AMI ID
   vpc_security_group_ids = [aws_security_group.allow_all_docker.id]
   instance_type          = "t3.micro"
-#   subnet_id              = "subnet-08b7b17f1acfbe645"
+   subnet_id              = "subnet-08b7b17f1acfbe645"
 
   # 20GB is not enough
   root_block_device {
